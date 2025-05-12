@@ -54,6 +54,12 @@ nav a:hover {
     color: #f44336;
 }
 
+nav img {
+    height: 70px;
+    width: 90px;
+    margin-top: 10px;
+}
+
 #modo-toggle {
     background: none;
     border: 2px solid #f44336;
