@@ -1,0 +1,237 @@
+/* === Reset básico === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Estilos generales === */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+body.claro {
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+/* === Encabezado y navegación === */
+header {
+    background: #1f1f1f;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav h1 {
+    color: #f44336;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f44336;
+}
+
+#modo-toggle {
+    background: none;
+    border: 2px solid #f44336;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #f44336;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#modo-toggle:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* === Sección principal === */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('../img/aden-heeremans-8l5VQDFEF5k-unsplash.jpg') no-repeat center center/cover;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* === Galería === */
+.galeria {
+    padding: 40px 20px;
+    background-color: #181818;
+}
+
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.imagenes img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0s ease;
+}
+
+.imagenes img.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Sección Historia === */
+.historia {
+    padding: 40px 20px;
+    background-color: #1f1f1f;
+}
+
+.historia h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* === Pie de página === */
+footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+body.claro header,
+body.claro .galeria,
+body.claro .historia,
+body.claro footer {
+    background-color: #e0e0e0;
+}
+
+/* === Contenido general === */
+.contenido {
+    padding: 60px 30px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* === Efecto fade-in al hacer scroll === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Formulario de contacto === */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.formulario button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #d32f2f;
+}
+
+/* === Lightbox para galería === */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+/* === Ajustes visuales adicionales para modo claro === */
+body.claro nav a:hover {
+    color: #b71c1c;
+}
+
+body.claro .formulario input,
+body.claro .formulario textarea {
+    border: 1px solid #999;
+}
+
+body.claro #modo-toggle {
+    border-color: #b71c1c;
+    color: #b71c1c;
+}
+
+body.claro #modo-toggle:hover {
+    background-color: #b71c1c;
+    color: white;
+}
