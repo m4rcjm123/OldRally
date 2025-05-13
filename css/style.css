@@ -18,6 +18,32 @@ body.claro {
   color: #111;
 }
 
+/* === Barra lateral === */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-track.claro {
+  background: #f5f5f5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
 /* === Encabezado y navegación === */
 header {
   background: #1f1f1f;
