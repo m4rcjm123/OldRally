@@ -58,6 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (form) {
         form.addEventListener('submit', e => {
             e.preventDefault();
+            const esEmailValid = email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+            if (!esEmailValid) {
+                alert('Introdueix un correu electrònic vàlid.');
+                return;
+            }
             const [nombre, email, mensaje] = form.querySelectorAll('input, textarea');
             if (!nombre.value.trim() || !email.value.trim() || !mensaje.value.trim()) {
                 alert('Por favor completa todos los campos.');
@@ -68,3 +73,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
