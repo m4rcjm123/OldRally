@@ -1,6 +1,9 @@
 <!-- Presentació dels participants -->
 <!DOCTYPE html>
 <html lang="es">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +11,48 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="contenedor">
 
 <header>
-    <nav>
-      <img src="img/OldRallyLogo.jpg" alt="Audi car with a the logo of OldRally"></img>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="detall.html">Detalles</a></li>
-            <li><a href="directori.html">Grupos</a></li>
-            <li><a href="about.html">Nosotros</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-        </ul>
-        <button id="modo-toggle">🌙/☀️</button>
+<!-- TOPBAR -->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <!-- Botón para abrir la sidebar -->
+    <button class="navbar-toggler me-2" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+            aria-controls="sidebar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- LOGO con tamaño personalizado -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/OldRallyLogo.jpg" alt="Audi car with a the logo of OldRally"
+           style="height: 70px; width: 90px;">
+    </a>
+
+    <!-- Botón de modo oscuro / claro -->
+    <button id="modo-toggle" class="btn btn-outline-light">🌙/☀️</button>
+  </div>
+</nav>
+
+<!-- SIDEBAR -->
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sidebar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menú</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body p-0">
+    <nav class="nav flex-column px-3">
+      <a class="nav-link text-white" href="index.html">Inicio</a>
+      <a class="nav-link text-white" href="detall.html">Blog</a>
+      <a class="nav-link text-white" href="directori.html">Grupos</a>
+      <a class="nav-link text-white" href="about.html">Sobre nosotros</a>
+      <a class="nav-link text-white" href="contact.html">Contacto</a>
     </nav>
+  </div>
+</div>
+
 </header>
 
 
@@ -45,7 +77,7 @@
     <p>© 2025 JDM Dream Garage - Pasión por los coches japoneses.</p>
 </footer>
 <script src="js/script.js"></script>
-
+  </div>
 </body>
 </html>
     
