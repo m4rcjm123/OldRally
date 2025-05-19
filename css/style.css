@@ -24,15 +24,6 @@ body.claro {
   width: 15px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #121212;
-}
-
-::-webkit-scrollbar-track.claro {
-  background: #f5f5f5;
-}
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: red;
