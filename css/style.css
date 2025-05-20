@@ -11,6 +11,7 @@ body {
   background-color: #121212;
   color: #f0f0f0;
   transition: background-color 0.4s, color 0.4s;
+  padding-top: 70px; /* evita que el topbar tape el contenido */
 }
 
 body.claro {
@@ -244,7 +245,7 @@ body.claro footer {
   padding: 60px 30px;
   text-align: center;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* === Efecto fade-in al hacer scroll === */
@@ -333,6 +334,7 @@ body.claro #modo-toggle:hover {
   background-color: #b71c1c;
   color: white;
 }
+
 /* === Breakpoint tablet (pantalles < 768px) === */
 @media (max-width: 768px) {
   nav ul {
@@ -372,3 +374,33 @@ body.claro #modo-toggle:hover {
     font-size: 0.8rem;
   }
 }
+
+/* === Sidebar fija en escritorio (pantallas grandes) === */
+@media (min-width: 992px) {
+  #sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 70px);
+  background-color: #1f1f1f;
+  padding: 20px 15px;
+  overflow-y: auto;
+  z-index: 999;
+  }
+  
+  main:not(.centrado), .pagina-ancha {
+  margin-left: 250px;
+  }
+  }
+
+  body {
+    margin-left: 250px;
+    padding-top: 70px;
+  }
+
+  .offcanvas-backdrop {
+    display: none !important;
+  }
+
+
