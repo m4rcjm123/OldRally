@@ -11,7 +11,10 @@
 <body>
 <header>
     <nav>
+        <button class="sideBar" onclick="openNav()">☰</button>
+
         <img src="img/OldRallyLogo.jpg" alt="Audi car with a the logo of OldRally"></img>
+
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="detall.html">Blog</a></li>
@@ -21,6 +24,20 @@
         </ul>
         <button id="modo-toggle">🌙 / ☀️</button>
     </nav>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="detall.html">Blog</a>
+            <a href="directori.html">Grupos</a>
+            <a href="about.html">Nosotros</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+    </div>
 </header>
 
 
