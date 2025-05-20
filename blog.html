@@ -1,0 +1,285 @@
+<!-- Blog de OldRally -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OldRally | Blog</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Estilos generales del sitio -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Estilos específicos del blog -->
+    <style>
+      /* Hero */
+      .blog-hero{
+        background:url('img/fondo.jpg') center/cover no-repeat;
+        height:300px;
+        position:relative;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin-bottom:2rem;
+      }
+      .blog-hero::after{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,.55);
+      }
+      .blog-hero h1{
+        position:relative;
+        color:#fff;
+        font-size:3rem;
+        font-weight:700;
+      }
+
+      /* Filtros */
+      .blog-filters a{
+        text-decoration:none;
+        font-weight:600;
+        color:#6c757d;
+        margin-right:1rem;
+      }
+      .blog-filters a.active,
+      .blog-filters a:hover{
+        color:#000;
+      }
+
+      /* Cards */
+      .blog-card{
+        transition:transform .2s ease;
+        cursor:pointer;
+      }
+      .blog-card:hover{
+        transform:translateY(-4px);
+      }
+      .blog-card img{
+        object-fit:cover;
+        height:180px;
+      }
+      .blog-card .tags span{
+        font-size:.75rem;
+        background:#e9ecef;
+        padding:.25rem .5rem;
+        border-radius:.25rem;
+        margin-right:.25rem;
+      }
+      .blog-card .meta{
+        font-size:.75rem;
+        color:#6c757d;
+      }
+
+      /* Buscador */
+      .search-wrapper{
+        max-width:250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <!-- Topbar reutilizada -->
+      <header class="mb-4">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid d-flex justify-content-between align-items-center">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">OldRally</a>
+          </div>
+        </nav>
+
+        <!-- Sidebar reutilizada -->
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarLabel">Menú</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <nav class="nav flex-column px-3">
+              <a class="nav-link text-white" href="index.html">Inicio</a>
+              <a class="nav-link text-white" href="blog.html">Blog</a>
+              <a class="nav-link text-white" href="directori.html">Grupos</a>
+              <a class="nav-link text-white" href="about.html">Sobre nosotros</a>
+              <a class="nav-link text-white" href="contact.html">Contacto</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="blog-hero">
+        <h1>Últimas entradas</h1>
+      </section>
+
+      <main class="container">
+        <!-- Filtros y buscador -->
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+          <div class="blog-filters">
+            <a href="#" class="active" data-filter="all">Todos</a>
+            <a href="#" data-filter="historia">Historia</a>
+            <a href="#" data-filter="coches">Coches</a>
+            <a href="#" data-filter="pilotos">Pilotos</a>
+            <a href="#" data-filter="eventos">Eventos</a>
+            <a href="#" data-filter="tecnica">Técnica</a>
+          </div>
+          <form class="d-flex search-wrapper" role="search">
+            <input class="form-control form-control-sm me-1" type="search" placeholder="Buscar..." aria-label="Buscar">
+            <button class="btn btn-sm btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+
+        <!-- Cards -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="blog-list">
+          <!-- Historia 1 -->
+          <div class="col" data-category="historia">
+            <a href="/cartas/detall-hist-montecarlo.html" class="text-decoration-none text-dark">
+              <div class="card blog-card h-100">
+                <img src="img/montecarlo-1911.jpg" class="card-img-top" alt="Gran Premio de Montecarlo 1911">
+                <div class="card-body">
+                  <h5 class="card-title">1911: el Gran Premio de Montecarlo y el nacimiento del rally</h5>
+                  <p class="card-text">Un repaso a la primera gran prueba de regularidad que sentó las bases del rally moderno.</p>
+                  <div class="tags mb-2">
+                    <span>historia</span><span>eventos</span>
+                  </div>
+                  <div class="meta d-flex justify-content-between">
+                    <span>12 Mar 2025</span>
+                    <span class="text-capitalize">Historia</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Historia 2 -->
+          <div class="col" data-category="historia">
+            <a href="detall-grupo-b.html" class="text-decoration-none text-dark">
+              <div class="card blog-card h-100">
+                <img src="img/grupo-b.jpg" class="card-img-top" alt="Grupo B Rally">
+                <div class="card-body">
+                  <h5 class="card-title">Grupo B (1982‑1986): la era de la velocidad sin límites</h5>
+                  <p class="card-text">Exploramos los coches, los héroes y las tragedias que marcaron la categoría más salvaje del rally.</p>
+                  <div class="tags mb-2">
+                    <span>historia</span><span>coches</span>
+                  </div>
+                  <div class="meta d-flex justify-content-between">
+                    <span>08 Mar 2025</span>
+                    <span class="text-capitalize">Historia</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Historia 3 -->
+          <div class="col" data-category="historia">
+            <a href="detall-wrc1973.html" class="text-decoration-none text-dark">
+              <div class="card blog-card h-100">
+                <img src="img/alpine-a110.jpg" class="card-img-top" alt="Alpine A110 1973">
+                <div class="card-body">
+                  <h5 class="card-title">1973: primer Mundial y la gesta del Alpine A110</h5>
+                  <p class="card-text">Cómo Renault‑Alpine se alzó con el título inaugural del WRC y cambió la historia para siempre.</p>
+                  <div class="tags mb-2">
+                    <span>historia</span><span>wrc</span>
+                  </div>
+                  <div class="meta d-flex justify-content-between">
+                    <span>01 Mar 2025</span>
+                    <span class="text-capitalize">Historia</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 1 existente -->
+          <div class="col" data-category="coches">
+            <a href="detall.html" class="text-decoration-none text-dark">
+              <div class="card blog-card h-100">
+                <img src="img/lancia-delta.jpg" class="card-img-top" alt="Lancia Delta Integrale">
+                <div class="card-body">
+                  <h5 class="card-title">Lancia Delta Integrale: leyenda del Grupo A</h5>
+                  <p class="card-text">Repasamos la historia y las innovaciones que convirtieron al Delta en un icono del rally mundial.</p>
+                  <div class="tags mb-2">
+                    <span>coches</span><span>historia</span>
+                  </div>
+                  <div class="meta d-flex justify-content-between">
+                    <span>10 Mar 2025</span>
+                    <span class="text-capitalize">Coches</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 2 existente -->
+          <div class="col" data-category="pilotos">
+            <a href="detall-piloto.html" class="text-decoration-none text-dark">
+              <div class="card blog-card h-100">
+                <img src="img/subaru-impreza.jpg" class="card-img-top" alt="Colin McRae Subaru">
+                <div class="card-body">
+                  <h5 class="card-title">Colin McRae y el arte de llevar el Impreza al límite</h5>
+                  <p class="card-text">Un homenaje al carismático piloto escocés y sus hazañas a bordo del Subaru Impreza.</p>
+                  <div class="tags mb-2">
+                    <span>pilotos</span><span>leyendas</span>
+                  </div>
+                  <div class="meta d-flex justify-content-between">
+                    <span>05 Mar 2025</span>
+                    <span class="text-capitalize">Pilotos</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 3 existente -->
+          <div class="col" data-category="eventos">
+            <a href="detall-evento.html" class="text-decoration-none text-dark">
+              <div class="card blog-card h-100">
+                <img src="img/audi-quattro.jpg" class="card-img-top" alt="Rally de Montecarlo 1984">
+                <div class="card-body">
+                  <h5 class="card-title">Rally Montecarlo 1984: el dominio del Audi Quattro</h5>
+                  <p class="card-text">Cómo el Quattro cambió para siempre la tracción total en competición.</p>
+                  <div class="tags mb-2">
+                    <span>eventos</span><span>historia</span>
+                  </div>
+                  <div class="meta d-flex justify-content-between">
+                    <span>22 Feb 2025</span>
+                    <span class="text-capitalize">Eventos</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="text-center py-4 mt-5">
+        <small>&copy; 2025 OldRally. Todos los derechos reservados.</small>
+      </footer>
+    </div>
+
+    <!-- Filtro simple con JS -->
+    <script>
+      const filterLinks = document.querySelectorAll('.blog-filters a');
+      const cards = document.querySelectorAll('#blog-list .col');
+
+      filterLinks.forEach(link=>{
+        link.addEventListener('click', e=>{
+          e.preventDefault();
+          filterLinks.forEach(l=>l.classList.remove('active'));
+          link.classList.add('active');
+          const filter = link.dataset.filter;
+          cards.forEach(card=>{
+            if(filter==='all' || card.dataset.category.includes(filter)){
+              card.classList.remove('d-none');
+            }else{
+              card.classList.add('d-none');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
