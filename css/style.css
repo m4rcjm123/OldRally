@@ -25,15 +25,6 @@ body.claro {
   width: 15px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #121212;
-}
-
-::-webkit-scrollbar-track.claro {
-  background: #f5f5f5;
-}
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: red;
@@ -43,6 +34,61 @@ body.claro {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
+}
+
+/* === The Overlay (background) === */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 150%;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 150%;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 5%;
+  }
 }
 
 /* === Encabezado y navegación === */
@@ -85,6 +131,26 @@ nav img {
   height: 70px;
   width: 90px;
   margin-top: 10px;
+}
+
+.sideBar {
+  font-size: 20px;
+  background-color: inherit; /* Fondo oscuro */
+  color: inherit;
+  border: 2px solid #ffffff20; /* Borde sutil */
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.sideBar:hover {
+  background-color: #80808075;
+  border-color: #f44336; /* Resalta con color naranja al pasar el mouse */
+}
+
+.sideBar:active {
+  background-color: #444444;
 }
 
 #modo-toggle {
