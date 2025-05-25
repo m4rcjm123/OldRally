@@ -20,11 +20,11 @@
 
       <img src="img/OldRallyLogo.jpg" alt="Audi car with a the logo of OldRally"></img>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="directori.html">Grupos</a></li>
-            <li><a href="about.html">Nosotros</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="directori.html">Grupos</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
         </ul>
         <button id="modo-toggle">🌙 / ☀️</button>
     </nav>
@@ -36,84 +36,141 @@
   
       <!-- Overlay content -->
       <div class="overlay-content">
-          <a href="index.html">Inicio</a>
-          <a href="blog.html">Blog</a>
-          <a href="about.html">Nosotros</a>
-          <a href="contact.html">Contacto</a>
+        <a href="index.html">Inicio</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Contacto</a>
       </div>
   </div>
 </header>
 
+<section class="container my-5">
+  <h2 class="mb-4">Grupos de Rally Clásicos</h2>
+  <div class="accordion" id="accordionGrups">
 
-<section>
-    <h2>Grups de Rally Clàssics</h2>
-  
-    <article itemscope itemtype="https://schema.org/Vehicle">
-      <h3 itemprop="name">Grup 1 Cotxes de sèrie</h3>
-      <p>Vehicles pràcticament de producció amb molt poques modificacions. Pensats per mantenir els costos baixos i facilitar l'accés al rally a pilots no professionals.</p>
-      <p><strong>Homologació:</strong> Mínim 5000 unitats produïdes.</p>
-      <p><strong>Ús principal:</strong> Iniciació i competició amateur.</p>
-      <p><strong>Característiques:</strong> Sense modificacions en motor ni suspensió. Només elements de seguretat.</p>
-    </article>
-  
-    <article itemscope itemtype="https://schema.org/Vehicle">
-      <h3 itemprop="name">Grup 2 Cotxes de turisme modificats</h3>
-      <p>Cotxes basats en models de sèrie però amb més llibertat per fer modificacions mecàniques. Molt utilitzats durant els anys 70.</p>
-        <p><strong>Homologació:</strong> Mínim 1000 unitats.</p>
-        <p><strong>Ús principal:</strong> Rallys europeus i mundials fins a inicis dels 80.</p>
-        <p><strong>Característiques:</strong> Lliure modificació de suspensió, motor i frens, però mantenint xassís original.</p>
+    <!-- Grupo 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+          Grupo 1: Coches de serie
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionGrups">
+        <div class="accordion-body">
+          <p>Vehículos prácticamente de producción con muy pocas modificaciones. Pensados para mantener los costes bajos y facilitar el acceso al rally a pilotos no profesionales.</p>
+          <p><strong>Homologación:</strong> Mínimo 5000 unidades producidas.</p>
+          <p><strong>Uso principal:</strong> Iniciación y competición amateur.</p>
+          <p><strong>Características:</strong> Sin modificaciones en motor ni suspensión. Solo elementos de seguridad.</p>
+        </div>
+      </div>
+    </div>
 
-    </article>
-  
-    <article itemscope itemtype="https://schema.org/Vehicle">
-      <h3 itemprop="name">Grup 3 Cotxes esportius de sèrie</h3>
-      <p>Turismes esportius homologats per competir amb poques modificacions. Vehicles com el Porsche 911 van destacar en aquest grup.</p>
-      <p><strong>Homologació:</strong> 500 unitats com a mínim.</p>
-<p><strong>Ús principal:</strong> Rallys de muntanya i asfalt.</p>
-<p><strong>Característiques:</strong> Vehicles com el Porsche 911, molt potents però amb tracció posterior.</p>
+    <!-- Grupo 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+          Grupo 2: Coches de turismo modificados
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionGrups">
+        <div class="accordion-body">
+          <p>Coches basados en modelos de serie pero con más libertad para hacer modificaciones mecánicas. Muy utilizados durante los años 70.</p>
+          <p><strong>Homologación:</strong> Mínimo 1000 unidades.</p>
+          <p><strong>Uso principal:</strong> Rallys europeos y mundiales hasta inicios de los 80.</p>
+          <p><strong>Características:</strong> Libre modificación de suspensión, motor y frenos, pero manteniendo el chasis original.</p>
+        </div>
+      </div>
+    </div>
 
-    </article>
-  
-    <article itemscope itemtype="https://schema.org/Vehicle">
-      <h3 itemprop="name">Grup 4 Cotxes esportius modificats</h3>
-      <p>Categoria per cotxes esportius de producció limitada, però amb moltes opcions de modificació. Van marcar una època abans de la introducció del Grup B.</p>
-      <p><strong>Homologació:</strong> 400 unitats.</p>
-      <p><strong>Ús principal:</strong> Anys 70 i inicis dels 80, especialment abans del Grup B.</p>
-      <p><strong>Característiques:</strong> Permetia grans modificacions per rendiment. Models mítics com el Lancia Stratos.</p>
-      
-    </article>
-  
-    <article itemscope itemtype="https://schema.org/Vehicle">
-      <h3 itemprop="name">Grup B Llegendari i perillós</h3>
-      <p>Creat el 1982, era conegut per permetre cotxes extremadament potents i lleugers. Els seus baixos requisits d'homologació van portar a una era espectacular però molt perillosa. Prohibit el 1986.</p>
-      <a href="detall.html">Veure més sobre el Lancia Delta Integrale</a>
-      <p><strong>Homologació:</strong> Només 200 unitats.</p>
-      <p><strong>Ús principal:</strong> Mundial de Rally (1982-1986).</p>
-      <p><strong>Característiques:</strong> Fins a 600 CV, menys de 1000 kg, molt perillós. Equipaments aerodinàmics i motors turbo sense límits pràctics.</p>
-    </article>
-  
-    <article itemscope itemtype="https://schema.org/Vehicle">
-      <h3 itemprop="name">Grup A Successor del Grup B</h3>
-      <p>Introduït com a alternativa més segura al Grup B. Basat en cotxes de producció amb certes restriccions. Va dominar el WRC durant els anys 90.</p>
-      <p><strong>Homologació:</strong> 2500 unitats.</p>
-      <p><strong>Ús principal:</strong> Mundial de Rally després de 1987 fins al 1997.</p>
-      <p><strong>Característiques:</strong> Cotxes derivats de sèrie amb tracció total, restriccions estrictes. Subaru, Mitsubishi, Ford i Toyota van dominar.</p>
-      
-    </article>
-  
-    <article itemscope itemtype="https://schema.org/Vehicle">
-      <h3 itemprop="name">Grup N Cotxes gairebé de sèrie</h3>
-      <p>Categoria per cotxes amb molt poques modificacions, orientada a equips amateurs i categories inferiors. Va ser molt utilitzada en rallys regionals.</p>
-      <p><strong>Homologació:</strong> 2500 unitats.</p>
-      <p><strong>Ús principal:</strong> Campionats nacionals i promoció de pilots joves.</p>
-      <p><strong>Característiques:</strong> Tracció integral limitada, poques modificacions. Cotxes com el Mitsubishi Lancer Evo i Subaru Impreza WRX base.</p>
-      
-    </article>
-  </section>
-  
-  
+    <!-- Grupo 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+          Grupo 3: Coches deportivos de serie
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionGrups">
+        <div class="accordion-body">
+          <p>Turismos deportivos homologados para competir con pocas modificaciones. Vehículos como el Porsche 911 destacaron en este grupo.</p>
+          <p><strong>Homologación:</strong> 500 unidades como mínimo.</p>
+          <p><strong>Uso principal:</strong> Rallys de montaña y asfalto.</p>
+          <p><strong>Características:</strong> Vehículos como el Porsche 911, muy potentes pero con tracción trasera.</p>
+        </div>
+      </div>
+    </div>
 
+    <!-- Grupo 4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+          Grupo 4: Coches deportivos modificados
+        </button>
+      </h2>
+      <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionGrups">
+        <div class="accordion-body">
+          <p>Categoría para coches deportivos de producción limitada, pero con muchas opciones de modificación. Marcaron una época antes de la introducción del Grupo B.</p>
+          <p><strong>Homologación:</strong> 400 unidades.</p>
+          <p><strong>Uso principal:</strong> Años 70 e inicios de los 80.</p>
+          <p><strong>Características:</strong> Permitía grandes modificaciones. Modelos míticos como el Lancia Stratos.</p>
+        </div>
+      </div>
+    </div>
 
+    
+    <!-- Grupo A -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingA">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA" aria-expanded="false" aria-controls="collapseA">
+          Grupo A: Sucesor del Grupo B
+        </button>
+      </h2>
+      <div id="collapseA" class="accordion-collapse collapse" aria-labelledby="headingA" data-bs-parent="#accordionGrups">
+        <div class="accordion-body">
+          <p>Introducido como una alternativa más segura al Grupo B. Basado en coches de producción con ciertas restricciones. Dominó el WRC durante los años 90.</p>
+          <p><strong>Homologación:</strong> 2500 unidades.</p>
+          <p><strong>Uso principal:</strong> Mundial de Rally después de 1987 hasta 1997.</p>
+          <p><strong>Características:</strong> Coches derivados de serie con tracción total y restricciones estrictas.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grupo B -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingB">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB" aria-expanded="false" aria-controls="collapseB">
+          Grupo B: Legendario y peligroso
+        </button>
+      </h2>
+      <div id="collapseB" class="accordion-collapse collapse" aria-labelledby="headingB" data-bs-parent="#accordionGrups">
+        <div class="accordion-body">
+          <p>Creado en 1982, era conocido por permitir coches extremadamente potentes y ligeros. Sus bajos requisitos de homologación llevaron a una era espectacular pero muy peligrosa. Prohibido en 1986.</p>
+          <p><strong>Homologación:</strong> Solo 200 unidades.</p>
+          <p><strong>Uso principal:</strong> Mundial de Rally (1982-1986).</p>
+          <p><strong>Características:</strong> Hasta 600 CV, menos de 1000 kg, muy peligroso. Motores turbo sin límites prácticos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grupo N -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingN">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseN" aria-expanded="false" aria-controls="collapseN">
+          Grupo N: Coches casi de serie
+        </button>
+      </h2>
+      <div id="collapseN" class="accordion-collapse collapse" aria-labelledby="headingN" data-bs-parent="#accordionGrups">
+        <div class="accordion-body">
+          <p>Categoría para coches con muy pocas modificaciones, orientada a equipos amateurs y categorías inferiores. Muy utilizada en rallys regionales.</p>
+          <p><strong>Homologación:</strong> 2500 unidades.</p>
+          <p><strong>Uso principal:</strong> Campeonatos nacionales y promoción de pilotos jóvenes.</p>
+          <p><strong>Características:</strong> Tracción integral limitada, pocas modificaciones. Coches como el Mitsubishi Lancer Evo y Subaru Impreza WRX base.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
 <footer>
     <p>© 2025 OldRally - Pasión por el rally antiguo.</p>
 </footer>
