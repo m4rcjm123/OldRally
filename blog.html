@@ -18,23 +18,23 @@
           <img src="img/OldRallyLogo.jpg" alt="Audi car with a the logo of OldRally"></img>
   
           <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="directori.html">Grupos</a></li>
-              <li><a href="about.html">Nosotros</a></li>
-              <li><a href="contact.html">Contacto</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="directori.html">Grupos</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
           </ul>
           <button id="modo-toggle">🌙 / ☀️</button>
       </nav>
       <!-- The overlay -->
       <div id="myNav" class="overlay">
-  
+
           <!-- Button to close the overlay navigation -->
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       
           <!-- Overlay content -->
           <div class="overlay-content">
-            <a href="index.html">Inicio</a>
+            <a href="blog.html">Blog</a>
             <a href="directori.html">Grupos</a>
             <a href="about.html">Nosotros</a>
             <a href="contact.html">Contacto</a>
@@ -195,6 +195,14 @@
 
     <!-- Filtro simple con JS -->
     <script>
+      function openNav() {
+         document.getElementById("myNav").style.width = "25%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+
       const filterLinks = document.querySelectorAll('.blog-filters a');
       const cards = document.querySelectorAll('#blog-list .col');
 
