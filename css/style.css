@@ -18,6 +18,39 @@ body.claro {
   color: #111;
 }
 
+.descripcion {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    margin-top: 40px;
+    background-color: transparent; /* Fondo exterior transparente */
+}
+
+/* Contenedor interior tipo "card" */
+.descripcion .contenido {
+    background-color: #700000;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b30000;
+}
+
+.descripcion h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.descripcion p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
 /* === Barra lateral === */
 /* width */
 ::-webkit-scrollbar {
@@ -241,7 +274,18 @@ nav img {
   background: url("../img/fondo.jpg") no-repeat center center/cover;
 }
 
-.hero h2 {
+/* Fondo semitransparente solo para el texto */
+.hero-content {
+    background-color: inherit;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Opcional: efecto suavizado detrás */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
