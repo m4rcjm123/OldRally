@@ -51,6 +51,70 @@ body.claro {
     margin-bottom: 15px;
 }
 
+.sobre-nosotros {
+    padding: 60px 20px;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Contenedor flexible para las tarjetas */
+.profile-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Tarjeta de perfil */
+.profile-card {
+    background-color: #700000; /* Blanco semitransparente */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    max-width: 300px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    border: 2px solid #b30000;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen de perfil */
+.profile-img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto dentro de la tarjeta */
+.profile-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.profile-card .title {
+    color: #c6c6c6;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    color: #c6c6c6;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 /* === Barra lateral === */
 /* width */
 ::-webkit-scrollbar {
