@@ -62,6 +62,40 @@ body.claro {
     text-align: center;
 }
 
+/* Cambia el fondo y texto del header del acordeón */
+.accordion-button {
+  background-color: #700000;
+  color: white;
+}
+
+/* Cambia el fondo y texto del header cuando está colapsado */
+.accordion-button.collapsed {
+  background-color: #700000;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #b30000;
+  color: #f1f1f1;
+}
+
+/* Cambia el fondo del contenido desplegado */
+.accordion-body {
+  background-color: #e6f0fa;
+  color: #333;
+}
+
+/* Elimina el borde por defecto y añade el tuyo */
+.accordion-item {
+  border: 2px solid #b30000;
+}
+
+/* Opcional: cambia el icono del acordeón (flecha) */
+.accordion-button::after {
+  filter: invert(1); /* icono blanco si fondo oscuro */
+}
+
+
 /* Contenedor flexible para las tarjetas */
 .profile-cards {
     display: flex;
